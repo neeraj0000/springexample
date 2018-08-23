@@ -18,7 +18,7 @@ node('maven-label') {
    }
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
-      archive 'target/*.war'
+      archive 'target/*.jar -cvf testdeploy.war'
    }
    
 
